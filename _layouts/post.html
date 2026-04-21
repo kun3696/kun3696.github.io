@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="max-w-3xl mx-auto py-12 px-6 bg-slate-800/50 rounded-2xl shadow-xl border border-slate-700">
+  <header class="mb-10">
+    <h1 class="text-4xl font-extrabold text-white mb-4 leading-tight">
+      {{ page.title }}
+    </h1>
+    <div class="flex items-center text-slate-400 text-sm font-mono">
+      <span>Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
+    </div>
+  </header>
+
+  <div class="prose prose-invert prose-blue max-w-none text-slate-300 leading-relaxed">
+    {{ content }}
+  </div>
+
+  <footer class="mt-12 pt-8 border-t border-slate-700">
+    <a href="/" class="text-blue-400 hover:text-blue-300 transition-all">
+      ← Back to list
+    </a>
+  </footer>
+</article>

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1 class="text-3xl font-extrabold text-white mb-8">Latest Logs</h1>
+<ul class="space-y-6">
+  {% for post in site.posts %}
+    <li class="border-l-4 border-blue-500 pl-4">
+      <span class="text-sm text-slate-500 font-mono">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ post.url | relative_url }}" class="block text-2xl font-bold text-blue-400 hover:text-blue-200 transition-all">
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
